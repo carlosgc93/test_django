@@ -10,6 +10,20 @@
     <link rel="shortcut icon" href="{% static 'img/icon.ico'%}">
 </head>
 <body>
-    
+    <main>
+        <h2>Registro de nuevo Favorito</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+
+
+            <!-- <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre">
+            <label for="url">URL del Favorito: </label>
+            <input type="text" name="url">
+            <button type="submit">Enviar</button> -->
+        </form>
+    </main>
 </body>
 </html>
