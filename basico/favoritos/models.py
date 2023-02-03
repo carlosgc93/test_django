@@ -10,3 +10,4 @@ class Favoritos(models.Model):
     # para mostrar el nombre del objeto
     def __str__(self):
         return self.nombre
+
