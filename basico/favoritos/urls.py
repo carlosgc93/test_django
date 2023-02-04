@@ -1,10 +1,9 @@
 from django.urls import path
 from .views import *
 
-app_name='favoritos'
 
 urlpatterns = [
-    path('',index),
-    path('crear',crear_favoritos),
-    path('lista',lista_favoritos),
+    path('', index, name="home"),
+    path('crear', crear_favoritos, name="crear"),
+    path('lista', lista_favoritos, name="lista"),
 ]

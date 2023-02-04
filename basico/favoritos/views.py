@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Favoritos
-from .forms import FavoritoForm
+from .forms import FavoritoForm, FavoritoModelForm
 
 # Create your views here.
 

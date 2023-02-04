@@ -1,3 +1,26 @@
-body{
-    background-color:  rgb(202, 229, 239);
+body {
+    color: black;
+    font-size: 30px;
+    font-family: 'Secular One', sans-serif;
+    background-color: rgb(227, 68, 10);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
