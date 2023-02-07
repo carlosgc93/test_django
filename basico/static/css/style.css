@@ -1,6 +1,6 @@
 body {
     color: black;
-    font-size: 30px;
+    font-size: 12px;
     font-family: 'Secular One', sans-serif;
     background-color: rgb(227, 68, 10);
 }
@@ -28,4 +28,9 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: black;
+}
+
+
+table { 
+    font-size: 10px;
 }

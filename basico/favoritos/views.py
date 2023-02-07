@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Favoritos
-from .forms import FavoritoForm, FavoritoModelForm
+from .forms import FavoritoModelForm
 
 # Create your views here.
 
@@ -11,14 +11,16 @@ def index(request):
 
 def crear_favoritos(request):
 
-    form = FavoritoForm()
+    form = FavoritoModelForm()
 
     if request.method == 'POST':
-        form = FavoritoForm(request.POST)
+        form = FavoritoModelForm(request.POST)
+        
         if form.is_valid():
-            nombre = form.cleaned_data['nombre']
-            url = form.cleaned_data['url']
-            Favoritos.objects.create(nombre=nombre, url=url)
+            form.save()
+            return redirect('crear')
+        else:
+            print(form.errors)
 
     context = {
         'form': form
@@ -28,4 +30,11 @@ def crear_favoritos(request):
 
 
 def lista_favoritos(request):
-    return render(request, 'favoritos/lista.html')
+    
+    favoritos_lista = Favoritos.objects.all()
+    
+    context = {
+        'favoritos_lista': favoritos_lista
+    }
+    
+    return render(request, 'favoritos/lista.html', context)

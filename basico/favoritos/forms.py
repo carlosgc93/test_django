@@ -12,6 +12,5 @@ class FavoritoForm(forms.Form):
 # formulario version dos mas pro
 class FavoritoModelForm(forms.ModelForm):
     class Meta:
-        model: Favoritos
+        model= Favoritos
         fields = '__all__' # ['nombre']
-        

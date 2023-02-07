@@ -22,7 +22,28 @@
             <li><a href="{% url 'lista' %}">Lista</a></li>
         </ul>
     </nav>
-    chelooo
+    <h4>Lista de Deseados</h4>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>URL</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fav in favoritos_lista %}
+                <tr>
+                    <td>{{ fav.nombre }}</td>
+                    <td>{{ fav.url }}</td>
+                    <td><a href=""></a>Borrar</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </div>
+
+
 </body>
 
 </html>
