@@ -17,9 +17,9 @@
 <body>
     <nav class="menu">
         <ul>
-            <li><a href="{% url 'home' %}">Inicio</a></li>
-            <li><a href="{% url 'crear' %}"> Crear </a></li>
-            <li><a href="{% url 'lista' %}">Lista</a></li>
+            <li><a href="{% url 'favs:home' %}">Inicio</a></li>
+            <li><a href="{% url 'favs:crear' %}"> Crear </a></li>
+            <li><a href="{% url 'favs:lista' %}">Lista</a></li>
         </ul>
     </nav>
     <h4>Lista de Deseados</h4>
@@ -29,7 +29,9 @@
                 <tr>
                     <th>Nombre</th>
                     <th>URL</th>
-                    <th></th>
+                    <th>⛔</th>
+                    <th>🔎</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -37,13 +39,13 @@
                 <tr>
                     <td>{{ fav.nombre }}</td>
                     <td>{{ fav.url }}</td>
-                    <td><a href=""></a>Borrar</td>
+                    <td><a href=" {% url 'favs:borrar' fav.pk %}">Borrar</a></td>
+                    <td><a href=" {% url 'favs:borrar' fav.pk %}">Detalle</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
+        </table>
     </div>
-
-
 </body>
 
 </html>

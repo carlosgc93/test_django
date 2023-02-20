@@ -1,8 +1,14 @@
 body {
-    color: black;
-    font-size: 12px;
+    font-size: 20px;
     font-family: 'Secular One', sans-serif;
-    background-color: rgb(227, 68, 10);
+    background-color: rgb(210, 196, 89);
+}
+h3  {
+    font-size: 20px;
+}
+
+table {
+    border: 2px solid;
 }
 
 ul {
@@ -11,6 +17,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    text-align: center;
 }
 
 li {
@@ -28,9 +35,4 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: black;
-}
-
-
-table { 
-    font-size: 10px;
 }
