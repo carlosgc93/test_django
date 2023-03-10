@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Favorito</title>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+    <link rel="shortcut icon" href="{% static 'img/icon.ico'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="{% url 'favs:home' %}">Inicio</a></li>
+            <li><a href="{% url 'favs:crear' %}"> Crear </a></li>
+            <li><a href="{% url 'favs:lista' %}">Lista</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Detalle Favorito</h2>
+        <p> {{ fav.nombre }}</p>
+        <p> <a href="{{ fav.nombre }}">{{ fav.nombre }}</a> </p>
+
+    </main>
+</body>
+</html>
